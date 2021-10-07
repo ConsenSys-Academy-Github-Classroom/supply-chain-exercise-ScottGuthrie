@@ -80,7 +80,7 @@ contract SupplyChain {
   // an Item has been added?
   // modifier forSale
   modifier forSale (uint _sku) {
-    //require(items[_sku].seller, "Needs a seller" );
+    
     require(items[_sku].state == State.ForSale, "Item is not sellable.");   
     _;
   }
